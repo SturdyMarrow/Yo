@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 public class PersonalityEngine {
     private static final Logger logger = LoggerFactory.getLogger(PersonalityEngine.class);
-    private final String masterName;
+    public final String masterName;
     private final List<String> compliments;
     private final Random random = new Random();
     private int lastComplimentIndex = -1;

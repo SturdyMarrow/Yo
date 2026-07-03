@@ -2,7 +2,6 @@ package com.jarvis.commands;
 
 import com.jarvis.core.Command;
 import java.util.Map;
-import java.util.StringBuilder;
 
 public class HelpCommand implements Command {
     private final Map<String, Command> commands;

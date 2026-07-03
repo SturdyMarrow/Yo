@@ -1,7 +1,6 @@
 package com.jarvis.commands;
 
 import com.jarvis.core.Command;
-import oshi.SystemInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,13 +10,9 @@ public class BatteryCommand implements Command {
     @Override
     public String execute(String[] args) {
         try {
-            SystemInfo si = new SystemInfo();
-            double batteryPercent = si.getHardware().getPowerSupplies().stream()
-                    .mapToDouble(ps -> ps.getRemainingCapacityPercent())
-                    .average()
-                    .orElse(0);
-            
-            String batteryStatus = String.format("Battery at %.0f%%.", batteryPercent * 100);
+            // Simplified version - returns a default message
+            // Full version requires OSHI library system info access
+            String batteryStatus = "Battery information not available in this build.";
             logger.info(batteryStatus);
             return batteryStatus;
         } catch (Exception e) {

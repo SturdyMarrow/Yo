@@ -47,11 +47,11 @@ public class CommandDispatcher {
                 return confirmation + " " + result;
             } catch (Exception e) {
                 logger.error("Error executing command: " + commandName, e);
-                return "I encountered an error, " + personalityEngine.masterName + ". " + e.getMessage();
+                return "I encountered an error. " + e.getMessage();
             }
         } else {
             logger.warn("Unknown command: " + commandName);
-            return "I'm sorry, " + personalityEngine.masterName + ". I don't recognize that command. Say 'help' for available commands.";
+            return "I'm sorry. I don't recognize that command. Say 'help' for available commands.";
         }
     }
 
